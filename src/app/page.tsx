@@ -16,6 +16,8 @@ import {
   CheckCircle2,
   TreePine,
   Flower2,
+  Wheat,
+  BookOpen,
 } from "lucide-react";
 
 const fadeIn = {
@@ -37,40 +39,59 @@ const staggerContainer = {
 
 const services = [
   {
+    title: "Crop Improvement & Plant Breeding",
+    desc: "Developing improved crop varieties with higher yields, pest and disease resistance through advanced breeding techniques.",
+    icon: <Wheat className="w-6 h-6" />,
+    items: [
+      "Row crops & vegetables",
+      "Pest & disease resistance",
+      "Germplasm introgression",
+      "Testing locations & data analytics",
+    ],
+  },
+  {
     title: "Agricultural Consulting",
-    desc: "Personalized advice on Plant Breeding methods, crop management, pest control, and sustainable practices.",
+    desc: "Personalized advice on crop management, pest control, and sustainable agriculture practices for research organizations and farmers.",
     icon: <Microscope className="w-6 h-6" />,
-    items: ["Row crops & vegetables", "Germplasm introgression", "Data analytics"],
+    items: [
+      "Crop management practices",
+      "Sustainable agriculture",
+      "Small holder & climate resilient practices",
+    ],
   },
   {
     title: "Kitchen Gardening",
-    desc: "Encouraging households to grow fresh produce. We provide kits, seeds, and expert guidance.",
+    desc: "Encouraging urban and rural households to grow their own fresh produce including fruits and vegetables. Our kits include seeds, seedlings, and expert guidance.",
     icon: <Flower2 className="w-6 h-6" />,
-    items: ["Gardening for Health", "Senior citizen focus", "Vegetable kits"],
+    items: [
+      "Gardening for Health",
+      "Senior citizen focus",
+      "Vegetable seeds & seedlings kits",
+    ],
   },
   {
     title: "Improved Seeds",
-    desc: "Genetically superior organic vegetable seeds that boost productivity and resilience.",
+    desc: "High-quality, genetically superior organic vegetable seeds that boost productivity and resilience, tailored to local soil conditions and climate.",
     icon: <Leaf className="w-6 h-6" />,
     items: ["Local climate tailored", "High-yield varieties", "Disease resistance"],
   },
   {
     title: "Genetics & Biotech",
-    desc: "Advising on modern agricultural technology including marker assisted selection (MAS).",
+    desc: "Advising on modern agricultural technology including marker assisted selection (MAS) and Doubled Haploids.",
     icon: <Sprout className="w-6 h-6" />,
     items: ["Doubled Haploids", "Molecular markers", "Biotech advising"],
   },
   {
     title: "Sustainable Practices",
-    desc: "Promoting biodiversity and minimizing chemical inputs for long-term ecological health.",
+    desc: "Committed to minimizing chemical inputs, promoting biodiversity, and measuring success in the positive impact on farmers' livelihoods.",
     icon: <Globe className="w-6 h-6" />,
     items: ["Climate resilience", "Organic methods", "Biodiversity promotion"],
   },
   {
     title: "Landscaping & Horticulture",
-    desc: "General agricultural methods for backyard fruit trees, herbs, flowers, and professional landscaping.",
+    desc: "Fruit trees for backyards, herbs and flowers, and professional landscaping services.",
     icon: <TreePine className="w-6 h-6" />,
-    items: ["Backyard fruit trees", "Herbs & flowers", "Professional design"],
+    items: ["Backyard fruit trees", "Herbs & flowers", "Professional landscaping"],
   },
 ];
 
@@ -176,10 +197,17 @@ export default function Home() {
                 <span className="italic text-leaf-700">Food Security</span>.
               </h2>
               <p className="text-lg text-earth-700 mb-6 leading-relaxed">
-                Everest Agri-Tech is founded by a passionate research scientist with
-                extensive knowledge and expertise in national and international
-                agriculture. We have deep-rooted expertise in Genetics, Plant Breeding,
-                Horticulture, and environmental stewardship.
+                Everest Agri-Tech is a dynamic agricultural consulting company founded
+                by a passionate research scientist with extensive knowledge and expertise
+                in national and international agriculture. Our mission is to empower
+                research organizations, scientists and farmers to enhance their crop
+                yields, profitability and contribute to food security.
+              </p>
+              <p className="text-base text-earth-600 mb-6 leading-relaxed">
+                We have deep-rooted expertise in Genetics, Plant Breeding, Horticulture,
+                and environmental stewardship. Our core values include integrity,
+                collaboration, and a relentless pursuit for excellence and customer
+                satisfaction.
               </p>
               <div className="grid grid-cols-2 gap-8 mt-12">
                 <div>
@@ -301,6 +329,13 @@ export default function Home() {
                 <span className="text-xs font-bold uppercase tracking-[0.3em] text-leaf-400 mb-4 block">
                   Meet the President
                 </span>
+                <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-leaf-500/30 shadow-lg mb-6">
+                  <img
+                    src="/images/khusi-tiwari.png"
+                    alt="Khusi Ram Tiwari, Ph.D."
+                    className="w-full h-full object-cover"
+                  />
+                </div>
                 <h2 className="text-5xl serif mb-6">
                   Khusi Ram Tiwari, <span className="italic">Ph.D.</span>
                 </h2>
@@ -319,7 +354,8 @@ export default function Home() {
                       <h4 className="font-bold text-lg">Career Highlights</h4>
                       <p className="text-sm text-earth-400 mt-1">
                         Inventor of 65+ corn inbreds and hybrids commercially grown in
-                        the US, Europe, and South America.
+                        the US, Europe, and South America. Leader in marker assisted
+                        selection (MAS) and Doubled Haploids technology.
                       </p>
                     </div>
                   </div>
@@ -330,8 +366,34 @@ export default function Home() {
                     <div>
                       <h4 className="font-bold text-lg">Academic Background</h4>
                       <p className="text-sm text-earth-400 mt-1">
-                        Ph.D. in Plant Breeding from the University of Manitoba, Canada.
-                        Adjunct Professor at Mississippi State University.
+                        Ph.D. and M.Sc. in Plant Breeding from the University of
+                        Manitoba, Canada. Recipient of IDRC Canada scholarship. Adjunct
+                        Professor at Mississippi State University (MSU).
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="mt-1">
+                      <Globe className="w-5 h-5 text-leaf-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg">International Impact</h4>
+                      <p className="text-sm text-earth-400 mt-1">
+                        IITA Breeding for Better Banana, Nigeria — Scientific Advisory
+                        Group (SAG) member (2020–2024). Experienced in international
+                        agriculture and small holder needs.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="mt-1">
+                      <BookOpen className="w-5 h-5 text-leaf-400" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg">Professional Memberships</h4>
+                      <p className="text-sm text-earth-400 mt-1">
+                        CSSA, ASA, NAPB, NAPA (Life Member), Plant Breeding and Genetics
+                        Society of Nepal, Nepal Biotechnology Society.
                       </p>
                     </div>
                   </div>
@@ -342,8 +404,9 @@ export default function Home() {
                     <div>
                       <h4 className="font-bold text-lg">Community Leader</h4>
                       <p className="text-sm text-earth-400 mt-1">
-                        Chair of CSSA International Crop Science Award committee and
-                        active mentor in the agricultural community.
+                        Chair of CSSA International Crop Science Award committee. Chair
+                        of NAPA Webinar Committee. NAPA Advisory Council Member. Active
+                        mentor and community volunteer.
                       </p>
                     </div>
                   </div>
@@ -374,8 +437,9 @@ export default function Home() {
                       Bayer Crop Science, Flora, MS
                     </p>
                     <p className="text-sm mt-3 text-earth-300">
-                      Leading corn hybrids testing and evaluation for Western and
-                      Southern US markets.
+                      Developed and led corn hybrids testing and evaluation for Western
+                      and Southern US markets. Advanced high performing hybrids/inbreds
+                      for commercial release.
                     </p>
                   </div>
                   <div className="relative pl-8 border-l border-leaf-500/30">
@@ -390,8 +454,9 @@ export default function Home() {
                       Bayer Crop Science, Flora, MS
                     </p>
                     <p className="text-sm mt-3 text-earth-300">
-                      Led corn breeding activities for Southern US and introgression of
-                      tropical germplasm.
+                      Led corn breeding activities for the 120RM Southern US market.
+                      Spearheaded introgression of tropical corn germplasm onto temperate
+                      corn. Mentored breeders, research associates, and graduate students.
                     </p>
                   </div>
                   <div className="relative pl-8 border-l border-leaf-500/30">
@@ -403,10 +468,30 @@ export default function Home() {
                       Research Scientist (Corn Breeder)
                     </h4>
                     <p className="text-sm text-earth-400">
-                      Pioneer Hi-Bred International, Inc.
+                      Pioneer Hi-Bred International, Inc., Cairo, GA
                     </p>
                     <p className="text-sm mt-3 text-earth-300">
                       Developed commercial corn inbreds and hybrids for Southern USA.
+                      Breeding for disease resistance (Corn Rusts, Southern Corn Leaf
+                      Blight, Northern Leaf Blight, Grey Leaf Spot, Fusarium ear rots).
+                      Collaborated with breeders from Argentina and Brazil.
+                    </p>
+                  </div>
+                  <div className="relative pl-8 border-l border-leaf-500/30">
+                    <div className="absolute -left-[5px] top-0 w-2 h-2 bg-leaf-400 rounded-full"></div>
+                    <span className="text-xs font-bold text-leaf-400 uppercase tracking-widest">
+                      1998 — 1999
+                    </span>
+                    <h4 className="text-xl font-bold mt-1">
+                      Post-Doctoral Researcher
+                    </h4>
+                    <p className="text-sm text-earth-400">
+                      Crop Development Centre, University of Saskatchewan, Canada
+                    </p>
+                    <p className="text-sm mt-3 text-earth-300">
+                      Established a molecular marker (AFLP) lab for pulse crops
+                      (Chickpea, Lentil, Peas). Developed AFLP and RAPD marker assays
+                      for Lentil Ascochyta blight resistance.
                     </p>
                   </div>
                 </div>
