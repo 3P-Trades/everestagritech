@@ -1,33 +1,54 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #1a1a1a;
-  --green-primary: #2d6a4f;
-  --green-light: #52b788;
-  --green-dark: #1b4332;
-  --earth-brown: #8b6914;
-  --cream: #f5f0e8;
-}
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), serif;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-green-primary: var(--green-primary);
-  --color-green-light: var(--green-light);
-  --color-green-dark: var(--green-dark);
-  --color-earth-brown: var(--earth-brown);
-  --color-cream: var(--cream);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-earth-50: #fdfcfb;
+  --color-earth-100: #f7f3f0;
+  --color-earth-200: #eee5de;
+  --color-earth-300: #e0d1c5;
+  --color-earth-400: #c9b4a3;
+  --color-earth-500: #b0947f;
+  --color-earth-600: #9a7d68;
+  --color-earth-700: #816856;
+  --color-earth-800: #6b5749;
+  --color-earth-900: #594a3f;
+  --color-earth-950: #2f2620;
+
+  --color-leaf-50: #f4f8f4;
+  --color-leaf-100: #e6f0e6;
+  --color-leaf-200: #cfe1cf;
+  --color-leaf-300: #abc9ab;
+  --color-leaf-400: #7ea77e;
+  --color-leaf-500: #5a875a;
+  --color-leaf-600: #466c46;
+  --color-leaf-700: #3a573a;
+  --color-leaf-800: #314731;
+  --color-leaf-900: #2a3c2a;
+  --color-leaf-950: #162116;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  background-color: var(--color-earth-50);
+  color: var(--color-earth-950);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+.serif {
+  @apply font-serif;
+}
+
+.section-padding {
+  @apply py-20 px-6 md:px-12 lg:px-24;
+}
+
+.glass-card {
+  @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-sm;
 }
